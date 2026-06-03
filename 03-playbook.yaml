@@ -8,7 +8,7 @@
      state: present
 
   - name: start nginx serveice
-    ansible.builtin.serveice:  #service package module
+    ansible.builtin.service:  #service package module
       name: nginx
       state: started
       enabled: yes
