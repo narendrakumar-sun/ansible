@@ -1,0 +1,14 @@
+- name: Install and start nginx
+  hosts: local
+  become: yes # for root user access
+  tasks:
+  - name: install nginx
+    ansible.builtin.package: # installing packages module
+     name: nginx
+     state: present
+
+  - name: start nginx serveice
+    ansible.builtin.serveice:  #service package module
+      name: nginx
+      state: start
+      enabled: yes
