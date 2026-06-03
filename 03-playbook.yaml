@@ -10,5 +10,5 @@
   - name: start nginx serveice
     ansible.builtin.serveice:  #service package module
       name: nginx
-      state: start
+      state: started
       enabled: yes
